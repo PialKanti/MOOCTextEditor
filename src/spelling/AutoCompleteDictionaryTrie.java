@@ -43,18 +43,24 @@ public class AutoCompleteDictionaryTrie implements Dictionary, AutoComplete {
     public boolean addWord(String word) {
         //TODO: Implement this method.
         word = word.toLowerCase();
-        boolean exists = true;
         TrieNode node = root;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
             if (node.getChild(c) == null) {
                 node = node.insert(c);
-                exists = false;
+            } else {
+                node = node.getChild(c);
             }
         }
-        if (!exists)
+
+        if (node != null && !node.endsWord()) {
             size++;
-        return exists;
+            node.setEndsWord(true);
+            return true;
+        }
+
+        return false;
+
     }
 
     /**
@@ -83,7 +89,10 @@ public class AutoCompleteDictionaryTrie implements Dictionary, AutoComplete {
                 return false;
             }
         }
-        return true;
+        if (node.endsWord())
+            return true;
+        else
+            return false;
     }
 
     /**
