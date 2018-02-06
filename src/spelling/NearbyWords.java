@@ -82,22 +82,18 @@ public class NearbyWords implements SpellingSuggest {
     public void insertions(String s, List<String> currentList, boolean wordsOnly) {
         // TODO: Implement this method
         for (int i = 0; i <= s.length(); i++) {
-            for (int j = 97; j <= 122; j++) {
-                String temp = "";
-                if (i == 0) {
-                    temp = Character.toString((char) i) + s;
-                } else if (i == s.length()) {
-                    temp = s + Character.toString((char) i);
-                } else {
-                    temp = s.substring(0, i) + Character.toString((char) i) + s.substring(i, s.length());
-                }
+            for (int charCode = (int) 'a'; charCode <= (int) 'z'; charCode++) {
+                StringBuffer sb = new StringBuffer(s);
+                sb.insert(i, (char) charCode);
 
-                if (wordsOnly) {
-                    if (dict.isWord(temp)) {
-                        currentList.add(temp);
+                if (!currentList.contains(sb.toString()) && !s.equals(sb.toString())) {
+                    if (wordsOnly) {
+                        if (dict.isWord(sb.toString())) {
+                            currentList.add(sb.toString());
+                        }
+                    } else {
+                        currentList.add(sb.toString());
                     }
-                } else {
-                    currentList.add(temp);
                 }
             }
         }
@@ -117,16 +113,19 @@ public class NearbyWords implements SpellingSuggest {
         for (int i = 0; i < s.length(); i++) {
             String temp = "";
             if (i == 0)
-                temp = s.substring(i + 1);
+                temp = s.substring(1);
             else if (i == s.length() - 1)
-                temp = s.substring(0, s.length());
+                temp = s.substring(0, s.length() - 1);
             else
                 temp = s.substring(0, i) + s.substring(i + 1);
-            if (wordsOnly) {
-                if (dict.isWord(temp))
+            if (!currentList.contains(temp)) {
+                if (wordsOnly) {
+                    if (dict.isWord(temp)) {
+                        currentList.add(temp);
+                    }
+                } else {
                     currentList.add(temp);
-            } else {
-                currentList.add(temp);
+                }
             }
         }
     }
@@ -154,27 +153,38 @@ public class NearbyWords implements SpellingSuggest {
         visited.add(word);
 
         // TODO: Implement the remainder of this method, see assignment for algorithm
+        while (retList.size() < numSuggestions && queue.size() > 0) {
+            String next = queue.remove(0);
+            for (String temp : distanceOne(next, true)) {
+                if (!visited.contains(temp)) {
+                    visited.add(temp);
+                    queue.add(temp);
+                    if (dict.isWord(temp)) {
+                        retList.add(temp);
+                    }
+                }
+            }
+        }
 
         return retList;
 
     }
 
     public static void main(String[] args) {
-	   //basic testing code to get started
-	   String word = "i";
-	   // Pass NearbyWords any Dictionary implementation you prefer
-	   Dictionary d = new DictionaryHashSet();
-	   DictionaryLoader.loadDictionary(d, "data/dict.txt");
-	   NearbyWords w = new NearbyWords(d);
-	   List<String> l = w.distanceOne(word, true);
-	   System.out.println("One away word Strings for for \""+word+"\" are:");
-	   System.out.println(l+"\n");
+        //basic testing code to get started
+        String word = "i";
+        // Pass NearbyWords any Dictionary implementation you prefer
+        Dictionary d = new DictionaryHashSet();
+        DictionaryLoader.loadDictionary(d, "data/dict.txt");
+        NearbyWords w = new NearbyWords(d);
+        List<String> l = w.distanceOne(word, true);
+        System.out.println("One away word Strings for for \""+word+"\" are:");
+        System.out.println(l+"\n");
 
-	   /* word = "tailo";
+	    word = "tailo";
 	   List<String> suggest = w.suggestions(word, 10);
 	   System.out.println("Spelling Suggestions for \""+word+"\" are:");
 	   System.out.println(suggest);
-	   */
     }
 
 }
