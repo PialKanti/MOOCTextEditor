@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8bb55742-3fee-4194-b07d-040a63ad4b6d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/MOOCTextEditor/spelling/NearbyWords.class" afterPath="$PROJECT_DIR$/out/production/MOOCTextEditor/spelling/NearbyWords.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MOOCTextEditor/spelling/NearbyWordsGraderOne.class" afterPath="$PROJECT_DIR$/out/production/MOOCTextEditor/spelling/NearbyWordsGraderOne.class" />
-      <change beforePath="$PROJECT_DIR$/src/spelling/NearbyWords.java" afterPath="$PROJECT_DIR$/src/spelling/NearbyWords.java" />
-      <change beforePath="$PROJECT_DIR$/src/spelling/NearbyWordsGraderOne.java" afterPath="$PROJECT_DIR$/src/spelling/NearbyWordsGraderOne.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -19,31 +15,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NearbyWords.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NearbyWords.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/spelling/NearbyWords.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="140" column="13" lean-forward="false" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
+            <state relative-caret-position="264">
+              <caret line="151" column="12" lean-forward="false" selection-start-line="151" selection-start-column="12" selection-end-line="151" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NearbyWordsGraderOne.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NearbyWordsGraderOne.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/spelling/NearbyWordsGraderOne.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
+            <state relative-caret-position="540">
               <caret line="35" column="45" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module5.part1.out" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grader_output/module5.part1.out">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -392,6 +378,14 @@
       <option name="presentableId" value="Default" />
       <updated>1502726687764</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updated">
+      <created>1517910961550</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1517910961550</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -463,6 +457,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="9" />
@@ -470,13 +468,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/textgen/MyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/textgen/MyLinkedListTester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -758,7 +749,7 @@
         <state relative-caret-position="22">
           <caret line="137" column="8" lean-forward="false" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -814,10 +805,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/spelling/NearbyWordsGraderOne.java">
+    <entry file="file://$PROJECT_DIR$/src/spelling/SpellingSuggest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="35" column="45" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="45" />
+        <state relative-caret-position="132">
+          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/spelling/NearbyWords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="151" column="12" lean-forward="false" selection-start-line="151" selection-start-column="12" selection-end-line="151" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -830,18 +829,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/spelling/SpellingSuggest.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/spelling/NearbyWords.java">
+    <entry file="file://$PROJECT_DIR$/src/spelling/NearbyWordsGraderOne.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="140" column="13" lean-forward="false" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
+        <state relative-caret-position="540">
+          <caret line="35" column="45" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="45" />
           <folding />
         </state>
       </provider>
